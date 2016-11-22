@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Ajax</title>
+	<link rel="stylesheet" href="css/css-ajax.css"> 
+</head>
+<body>
+<article class="container">
+
+	<header class="header">
+		<h2>Pokedex</h2>
+	</header>
+
+  <section class="content">
+    <div class="pokemon-name">
+			<div class="pokemon-name__list"></div>    
+			<input class="pokemon-name__button" type="button" name="Load more" value="Load more">      
+		</div>
+
+    <div class="pokemon-information">
+      <div class="pokemon-information__show">
+        <div class="ajax-loader">
+          <img src="https://hsto.org/getpro/habr/post_images/451/5dc/843/4515dc843bbdc21e00d96d4db2a42d87.gif" alt=""> 
+        </div>
+      </div>     
+    </div>
+
+    <script id="pokemon-template" type="x-tmpl-mustache">
+      {{#pokemons}}
+      <div>
+        <h2 value="{{url}}">{{name}}</h2>
+      </div>
+      {{/pokemons}}
+    </script>
+
+
+    <script id="pokemon-name-item" type="x-tmpl-mustache">
+      {{#pokemons}}
+        <div class="pokemon-name-item__wrapper"> 
+          <img src="http://pokeapi.co/media/img/{{id}}.png" alt="">
+          <caption>
+            <h1>{{name}}</h1>
+          </caption>
+          <table>
+            <tr>
+              <td><b>Weight</b></td><td><b>{{weight}}</b></td>
+            </tr>
+            <tr>
+              <td><b>Height</b></td><td><b>{{height}}</b></td>
+            </tr>
+            <tr>
+              <td><b>Base experience</b></td><td><b>{{base_experience}}</b></td>
+            </tr>
+            <tr>
+              <td><b>Order</b></td><td><b>{{order}}</b></td>
+            </tr>
+             <tr>
+              <td><b>Id</b></td><td><b>{{id}}</b></td>
+            </tr>
+          </table>       
+        </div>        
+      {{/pokemons}}
+    </script>
+  </section>
+<script src='script/jquery-3.1.1.min.js'></script>
+<script src='script/mustache.min.js' ></script>
+<script src='script/script-ajax.js'></script>
+</body>
+</html>
