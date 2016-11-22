@@ -3,13 +3,13 @@
 On click of ‘Load More’ another chunk of the list is being loaded and displayed on the page. Pokemon details should be displayed after clicking on the single pokemon in list. Previously shown pokemon details should disappear. 
 
 Regarding API:
--Get chunk of pokemon list
+1) Get chunk of pokemon list - 
 http://pokeapi.co/api/v1/pokemon/?limit=12
--Get information about single pokemon
+2) Get information about single pokemon - 
 http://pokeapi.co/api/v1/pokemon/{{id}}
--Image of pokemon
+3) Image of pokemon - 
 http://pokeapi.co/media/img/{{id}}.png  (or available through sprites.resource_uri resource)
--All possible types
+4) All possible types -
 http://pokeapi.co/api/v1/type/?limit=999
 
 Bonus points for implementing:
